@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Trabajos — Benja Visuals | Edición, Diseño y Web</title>
+
 <meta name="description" content="Explorá los trabajos de Benja Visuals: edición de video, diseño visual y proyectos web.">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#07152F">
-
-<link rel="canonical" href="https://tudominio.com/trabajos.html">
 
 <meta property="og:title" content="Trabajos — Benja Visuals">
 <meta property="og:description" content="Edición, diseño y desarrollo web. Proyectos seleccionados de Benja Visuals.">
@@ -27,8 +27,8 @@
   --fg:#f5f7ff;
   --muted:#9ba8c2;
   --line:rgba(190,205,255,.13);
-  --a:#8e9bff;
   --accent:#8e9bff;
+  --a:#8e9bff;
 }
 
 *{
@@ -37,7 +37,6 @@
 
 html{
   scroll-behavior:smooth;
-  overflow-x:hidden;
 }
 
 body{
@@ -88,11 +87,6 @@ body:after{
 a{
   color:inherit;
   text-decoration:none;
-}
-
-img,
-video{
-  max-width:100%;
 }
 
 .wrap{
@@ -218,7 +212,6 @@ nav{
   z-index:99;
 
   background:rgba(8,19,45,.97);
-
   backdrop-filter:blur(24px);
   -webkit-backdrop-filter:blur(24px);
 
@@ -233,6 +226,7 @@ nav{
   visibility:hidden;
 
   transform:translateY(-10px) scale(.98);
+
   transform-origin:top right;
 
   transition:.28s cubic-bezier(.2,.8,.2,1);
@@ -301,6 +295,7 @@ nav{
   top:105px;
   height:calc(100vh - 145px);
   padding-top:150px;
+
   display:flex;
   flex-direction:column;
 }
@@ -348,8 +343,10 @@ nav{
 .side-link b{
   font:14px Inter;
   font-weight:400;
+
   opacity:0;
   transform:translateX(-5px);
+
   transition:.25s;
 }
 
@@ -373,7 +370,9 @@ nav{
 .side-foot{
   margin-top:auto;
   padding:16px 12px;
+
   border-top:1px solid var(--line);
+
   color:#59667e;
   font:9px/1.7 "DM Mono";
 }
@@ -420,12 +419,14 @@ nav{
 
 
 /* =========================
-   CATEGORÍAS
+   CATEGORIAS
 ========================= */
 
 .portfolio-category{
   scroll-margin-top:105px;
+
   padding:35px 0 100px;
+
   border-top:1px solid var(--line);
 }
 
@@ -433,10 +434,11 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:end;
+
   margin-bottom:25px;
 }
 
-.category-head>div{
+.category-head > div{
   display:flex;
   align-items:baseline;
   gap:14px;
@@ -449,7 +451,9 @@ nav{
 
 .category-head h2{
   margin:0;
+
   font:700 clamp(35px,5vw,65px)/.9 "Space Grotesk";
+
   letter-spacing:-.07em;
 }
 
@@ -461,7 +465,7 @@ nav{
 
 
 /* =========================
-   PROYECTOS
+   CARDS
 ========================= */
 
 .project-grid{
@@ -473,29 +477,36 @@ nav{
 .project{
   border:1px solid var(--line);
   background:rgba(255,255,255,.025);
+
   overflow:hidden;
+
   transition:.4s;
 }
 
 .project:hover{
   transform:translateY(-6px);
-  border-color:rgba(190,200,255,.3);
-  box-shadow:0 28px 70px rgba(0,0,0,.2);
-}
 
-.project-feature{
-  grid-row:span 2;
+  border-color:rgba(190,200,255,.3);
+
+  box-shadow:0 28px 70px rgba(0,0,0,.2);
 }
 
 .visual{
   height:330px;
-  background:linear-gradient(
-    135deg,
-    #0b1938,
-    #171b41
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b1938,
+      #171b41
+    );
+
   position:relative;
   overflow:hidden;
+}
+
+.project-feature{
+  grid-row:span 2;
 }
 
 .project-feature .visual{
@@ -510,6 +521,59 @@ nav{
   display:block;
 }
 
+.placeholder{
+  height:100%;
+
+  display:grid;
+  place-items:center;
+
+  background:
+    radial-gradient(
+      circle at 65% 35%,
+      rgba(142,155,255,.2),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #0b1835,
+      #141a3e
+    );
+}
+
+.placeholder strong{
+  font:700 clamp(45px,7vw,100px)/.8 "Space Grotesk";
+  letter-spacing:-.08em;
+  color:#e8ebff;
+}
+
+.info{
+  padding:17px;
+  border-top:1px solid var(--line);
+}
+
+.info-row{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.info h3{
+  font:600 19px "Space Grotesk";
+  margin:0;
+}
+
+.tag{
+  font:9px "DM Mono";
+  color:#77849e;
+}
+
+.info p{
+  font-size:11px;
+  color:#8997b2;
+  line-height:1.6;
+  margin:9px 0 0;
+}
+
 
 /* =========================
    REELS
@@ -521,7 +585,7 @@ nav{
 
 .reel-card{
   border:1px solid var(--line);
-  background:transparent;
+  background:#050b18;
 }
 
 .reel-card:hover{
@@ -529,64 +593,34 @@ nav{
   box-shadow:none;
 }
 
-.reel-visual{
-  width:100%;
-  height:auto;
-  aspect-ratio:9 / 16;
-  background:#050b18;
-  position:relative;
-  overflow:hidden;
-}
-
-.reel-video{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-  background:#050b18;
-}
-
 .reel-card .info{
   display:none;
 }
 
-
-/* =========================
-   DISEÑOS
-========================= */
-
-.design-card{
-  border:1px solid var(--line);
-  background:transparent;
-}
-
-.design-card:hover{
-  transform:none;
-  box-shadow:none;
-}
-
-.design-visual{
+.reel-visual{
   width:100%;
-  height:auto;
-  aspect-ratio:4 / 3;
+  height:420px;
+
+  background:#050b18;
+
+  position:relative;
+  overflow:hidden;
+}
+
+.reel-visual video{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+
   background:#050b18;
 }
 
-.design-visual img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition:transform .5s ease;
-}
-
-.design-card:hover .design-visual img{
-  transform:scale(1.02);
-}
-
 
 /* =========================
-   VIDEOS LARGOS
+   YOUTUBE
 ========================= */
 
 .longform-head{
@@ -597,16 +631,17 @@ nav{
   border-top:1px solid var(--line);
 
   padding-top:15px;
+
   margin:75px 0 22px;
 }
 
-.longform-head>div{
+.longform-head > div{
   display:flex;
   align-items:baseline;
   gap:14px;
 }
 
-.longform-head>div>span{
+.longform-head > div > span{
   font:10px "DM Mono";
   color:#8e9bb5;
 }
@@ -630,18 +665,27 @@ nav{
 .youtube-preview{
   display:block;
   position:relative;
+
   aspect-ratio:16/9;
+
   overflow:hidden;
+
   background:#090d18;
+
   border-bottom:1px solid var(--line);
 }
 
 .youtube-preview img{
   width:100%;
   height:100%;
+
   display:block;
+
   object-fit:cover;
-  transition:transform .5s ease,filter .5s ease;
+
+  transition:
+    transform .5s ease,
+    filter .5s ease;
 }
 
 .youtube-card:hover .youtube-preview img{
@@ -651,20 +695,26 @@ nav{
 
 .youtube-preview:after{
   content:"";
+
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    180deg,
-    rgba(5,10,25,.02),
-    rgba(5,10,25,.58)
-  );
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5,10,25,.02),
+      rgba(5,10,25,.58)
+    );
+
   pointer-events:none;
 }
 
 .youtube-play{
   position:absolute;
+
   left:50%;
   top:50%;
+
   z-index:2;
 
   transform:translate(-50%,-50%);
@@ -695,18 +745,24 @@ nav{
 
 .youtube-badge{
   position:absolute;
+
   left:16px;
   top:15px;
+
   z-index:2;
 
   background:rgba(7,21,47,.86);
+
   border:1px solid rgba(255,255,255,.14);
 
   padding:7px 9px;
+
   border-radius:5px;
 
   color:#fff;
+
   font:9px "DM Mono";
+
   letter-spacing:.12em;
 }
 
@@ -720,6 +776,47 @@ nav{
 
 .youtube-card .info p{
   margin-top:8px;
+}
+
+
+/* =========================
+   DISEÑOS
+========================= */
+
+.design-card{
+  border:1px solid var(--line);
+  background:transparent;
+}
+
+.design-card:hover{
+  transform:none;
+  box-shadow:none;
+}
+
+.design-card .info{
+  display:none;
+}
+
+.design-visual{
+  height:100%;
+  aspect-ratio:4/3;
+
+  background:#050b18;
+}
+
+.design-visual img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:transform .5s ease;
+}
+
+.design-card:hover .design-visual img{
+  transform:scale(1.02);
 }
 
 
@@ -740,7 +837,9 @@ nav{
 .web-site-card .visual iframe{
   width:100%;
   height:100%;
+
   border:0;
+
   background:#fff;
 }
 
@@ -774,8 +873,10 @@ nav{
 
 .jobs-wa{
   position:fixed;
+
   right:24px;
   bottom:24px;
+
   z-index:70;
 
   padding:13px 16px;
@@ -783,6 +884,7 @@ nav{
   border-radius:999px;
 
   background:#25D366;
+
   color:#062512;
 
   font:700 10px "DM Mono";
@@ -805,11 +907,15 @@ nav{
 
 footer{
   border-top:1px solid var(--line);
+
   padding:25px 0 40px;
+
   color:#6f7d98;
+
   font:10px "DM Mono";
 
   display:flex;
+
   justify-content:space-between;
 }
 
@@ -822,14 +928,18 @@ footer{
 
   .portfolio-page{
     grid-template-columns:1fr;
+
     gap:0;
-    padding:0 4vw;
+
+    padding:0 5vw;
   }
 
   .portfolio-sidebar{
     position:sticky;
+
     top:70px;
-    z-index:50;
+
+    z-index:15;
 
     height:auto;
 
@@ -837,8 +947,8 @@ footer{
 
     background:rgba(7,21,47,.88);
 
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
     border-bottom:1px solid var(--line);
   }
@@ -851,14 +961,19 @@ footer{
 
   .side-nav{
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:6px;
   }
 
   .side-link{
     grid-template-columns:1fr;
+
     text-align:center;
+
     justify-items:center;
+
     gap:3px;
 
     padding:10px 5px;
@@ -880,7 +995,6 @@ footer{
 
   .project-grid{
     grid-template-columns:1fr;
-    gap:12px;
   }
 
   .project-feature{
@@ -900,27 +1014,29 @@ footer{
   }
 
   .reel-visual{
-    height:auto;
-    aspect-ratio:9/16;
+    height:430px;
   }
 
   .youtube-grid{
     grid-template-columns:1fr;
   }
 
-  .web-list{
-    grid-template-columns:1fr 1fr;
-  }
-
   .longform-head{
     margin-top:55px;
   }
 
-  .portfolio-category{
-    scroll-margin-top:125px;
-    padding-bottom:75px;
+  .web-list{
+    grid-template-columns:1fr 1fr;
   }
 
+  .preview iframe{
+    height:360px;
+  }
+
+  .jobs-wa{
+    right:15px;
+    bottom:15px;
+  }
 }
 
 
@@ -952,6 +1068,7 @@ footer{
   .menu-panel{
     top:79px;
     right:15px;
+
     width:calc(100vw - 30px);
   }
 
@@ -960,7 +1077,7 @@ footer{
   }
 
   .portfolio-page{
-    padding:0 3.5vw;
+    padding:0 4vw;
   }
 
   .portfolio-intro{
@@ -986,6 +1103,7 @@ footer{
 
   .portfolio-category{
     padding-top:28px;
+    padding-bottom:75px;
   }
 
   .category-head{
@@ -1001,39 +1119,12 @@ footer{
     margin-top:10px;
   }
 
-  /*
-     UN REEL POR FILA EN CELULAR
-     Así ocupa todo el ancho y no se
-     achica demasiado.
-  */
-
-  .reels-grid{
-    grid-template-columns:1fr;
-    gap:14px;
-  }
-
-  .reel-card{
-    width:100%;
-  }
-
-  .reel-visual{
-    width:100%;
-    height:auto;
-    aspect-ratio:9/16;
-  }
-
-  .reel-video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+  .project-feature .visual{
+    height:300px;
   }
 
   .visual{
     height:230px;
-  }
-
-  .project-feature .visual{
-    height:300px;
   }
 
   .info{
@@ -1049,20 +1140,29 @@ footer{
     margin-top:6px;
   }
 
-  .web-list{
+  /* REELS EN CELULAR */
+
+  .reels-grid{
     grid-template-columns:1fr;
   }
 
-  .web-site-card .visual{
-    height:260px;
+  .reel-visual{
+    width:100%;
+    height:auto;
+
+    aspect-ratio:9 / 16;
   }
 
-  .preview iframe{
-    height:280px;
+  .reel-visual video{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
   }
 
   .longform-head{
     display:block;
+
     margin-top:45px;
   }
 
@@ -1078,23 +1178,36 @@ footer{
   .youtube-play{
     width:62px;
     height:44px;
+
     font-size:17px;
   }
 
+  .web-list{
+    grid-template-columns:1fr;
+  }
+
+  .web-site-card .visual{
+    height:260px;
+  }
+
+  .preview iframe{
+    height:280px;
+  }
+
   .jobs-wa{
+    font-size:9px;
+
+    padding:12px 13px;
+
     right:15px;
     bottom:15px;
-    font-size:9px;
-    padding:12px 13px;
-    max-width:calc(100vw - 30px);
-    white-space:nowrap;
   }
 
   footer{
     flex-direction:column;
+
     gap:10px;
   }
-
 }
 
 
@@ -1106,7 +1219,9 @@ footer{
 
   .portfolio-page{
     max-width:1750px;
+
     grid-template-columns:270px minmax(0,1fr);
+
     gap:90px;
   }
 
@@ -1121,7 +1236,6 @@ footer{
   .project-feature .visual{
     height:600px;
   }
-
 }
 
 @media(min-width:2560px){
@@ -1129,12 +1243,11 @@ footer{
   .portfolio-page{
     max-width:2100px;
   }
-
 }
 
 
 /* =========================
-   ACCESIBILIDAD
+   REDUCIR ANIMACIONES
 ========================= */
 
 @media(prefers-reduced-motion:reduce){
@@ -1142,11 +1255,13 @@ footer{
   *,
   *::before,
   *::after{
+
     animation-duration:.01ms!important;
+
     transition-duration:.01ms!important;
+
     scroll-behavior:auto!important;
   }
-
 }
 
 </style>
@@ -1307,7 +1422,9 @@ footer{
   <section class="portfolio-content">
 
 
-    <!-- INTRO -->
+    <!-- =========================
+         INTRO
+    ========================= -->
 
     <header class="portfolio-intro">
 
@@ -1321,10 +1438,8 @@ footer{
       </h1>
 
       <p>
-        Una selección organizada de edición,
-        diseño y desarrollo. Cada categoría
-        reúne únicamente el tipo de trabajo
-        que querés ver.
+        Una selección organizada de edición, diseño y desarrollo.
+        Cada categoría reúne únicamente el tipo de trabajo que querés ver.
       </p>
 
     </header>
@@ -1332,7 +1447,7 @@ footer{
 
     <!-- =========================
          EDICIÓN
-    ========================== -->
+    ========================= -->
 
     <section
       class="portfolio-category"
@@ -1370,13 +1485,20 @@ footer{
           <div class="visual reel-visual">
 
             <video
-              class="reel-video"
               controls
               playsinline
-              preload="none"
-              muted
-              data-src="assets/projects/edicion/video1.mp4"
-            ></video>
+              preload="metadata"
+              poster=""
+            >
+
+              <source
+                src="assets/projects/edicion/video1.mp4"
+                type="video/mp4"
+              >
+
+              Tu navegador no puede reproducir este video.
+
+            </video>
 
           </div>
 
@@ -1390,13 +1512,20 @@ footer{
           <div class="visual reel-visual">
 
             <video
-              class="reel-video"
               controls
               playsinline
-              preload="none"
-              muted
-              data-src="assets/projects/edicion/video2.mp4"
-            ></video>
+              preload="metadata"
+              poster=""
+            >
+
+              <source
+                src="assets/projects/edicion/video2.mp4"
+                type="video/mp4"
+              >
+
+              Tu navegador no puede reproducir este video.
+
+            </video>
 
           </div>
 
@@ -1410,13 +1539,20 @@ footer{
           <div class="visual reel-visual">
 
             <video
-              class="reel-video"
               controls
               playsinline
-              preload="none"
-              muted
-              data-src="assets/projects/edicion/video3.mp4"
-            ></video>
+              preload="metadata"
+              poster=""
+            >
+
+              <source
+                src="assets/projects/edicion/video3.mp4"
+                type="video/mp4"
+              >
+
+              Tu navegador no puede reproducir este video.
+
+            </video>
 
           </div>
 
@@ -1428,7 +1564,7 @@ footer{
 
       <!-- =========================
            VIDEOS LARGOS
-      ========================== -->
+      ========================= -->
 
       <div class="longform-head">
 
@@ -1452,6 +1588,8 @@ footer{
       <div class="project-grid youtube-grid">
 
 
+        <!-- YOUTUBE 1 -->
+
         <article
           class="project youtube-card"
           data-youtube="5tRdIf6yyII"
@@ -1474,7 +1612,10 @@ footer{
               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/5tRdIf6yyII/hqdefault.jpg'"
             >
 
-            <span class="youtube-play">
+            <span
+              class="youtube-play"
+              aria-hidden="true"
+            >
               ▶
             </span>
 
@@ -1488,7 +1629,7 @@ footer{
 
             <div class="info-row">
 
-              <h3>
+              <h3 class="youtube-title">
                 Storytelling
               </h3>
 
@@ -1506,6 +1647,8 @@ footer{
 
         </article>
 
+
+        <!-- YOUTUBE 2 -->
 
         <article
           class="project youtube-card"
@@ -1529,7 +1672,10 @@ footer{
               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/u2S3YnkTW5U/hqdefault.jpg'"
             >
 
-            <span class="youtube-play">
+            <span
+              class="youtube-play"
+              aria-hidden="true"
+            >
               ▶
             </span>
 
@@ -1543,7 +1689,7 @@ footer{
 
             <div class="info-row">
 
-              <h3>
+              <h3 class="youtube-title">
                 Vlog
               </h3>
 
@@ -1561,6 +1707,8 @@ footer{
 
         </article>
 
+
+        <!-- YOUTUBE 3 -->
 
         <article
           class="project youtube-card"
@@ -1584,7 +1732,10 @@ footer{
               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/K93TM6TrQ6Q/hqdefault.jpg'"
             >
 
-            <span class="youtube-play">
+            <span
+              class="youtube-play"
+              aria-hidden="true"
+            >
               ▶
             </span>
 
@@ -1598,7 +1749,7 @@ footer{
 
             <div class="info-row">
 
-              <h3>
+              <h3 class="youtube-title">
                 Gaming
               </h3>
 
@@ -1616,6 +1767,8 @@ footer{
 
         </article>
 
+
+        <!-- YOUTUBE 4 -->
 
         <article
           class="project youtube-card"
@@ -1639,7 +1792,10 @@ footer{
               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/7iMd3vNVAt0/hqdefault.jpg'"
             >
 
-            <span class="youtube-play">
+            <span
+              class="youtube-play"
+              aria-hidden="true"
+            >
               ▶
             </span>
 
@@ -1653,7 +1809,7 @@ footer{
 
             <div class="info-row">
 
-              <h3>
+              <h3 class="youtube-title">
                 Gaming
               </h3>
 
@@ -1671,6 +1827,8 @@ footer{
 
         </article>
 
+
+        <!-- YOUTUBE 5 -->
 
         <article
           class="project youtube-card"
@@ -1694,7 +1852,10 @@ footer{
               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/9D7uMbGHGbQ/hqdefault.jpg'"
             >
 
-            <span class="youtube-play">
+            <span
+              class="youtube-play"
+              aria-hidden="true"
+            >
               ▶
             </span>
 
@@ -1708,7 +1869,7 @@ footer{
 
             <div class="info-row">
 
-              <h3>
+              <h3 class="youtube-title">
                 Vlog
               </h3>
 
@@ -1734,7 +1895,7 @@ footer{
 
     <!-- =========================
          DISEÑOS
-    ========================== -->
+    ========================= -->
 
     <section
       class="portfolio-category"
@@ -1875,7 +2036,7 @@ footer{
 
     <!-- =========================
          WEBS
-    ========================== -->
+    ========================= -->
 
     <section
       class="portfolio-category"
@@ -1903,6 +2064,8 @@ footer{
 
       <div class="web-list">
 
+
+        <!-- MR PORTONES -->
 
         <article class="project web-site-card">
 
@@ -1939,6 +2102,8 @@ footer{
         </article>
 
 
+        <!-- MENU BOX -->
+
         <article class="project web-site-card">
 
           <div class="visual web-visual">
@@ -1973,6 +2138,8 @@ footer{
 
         </article>
 
+
+        <!-- LA BARDOT -->
 
         <article class="project web-site-card">
 
@@ -2050,78 +2217,80 @@ footer{
 </footer>
 
 
-<script>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-/* =========================
-   AÑO
-========================= */
+<script>
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
 
 /* =========================
-   MENÚ
+   MENU
 ========================= */
 
-const mt =
+const menuToggle =
   document.getElementById("menuToggle");
 
-const mp =
+const menuPanel =
   document.getElementById("menuPanel");
 
 
 function closeMenu(){
 
-  mp.classList.remove("open");
+  menuPanel.classList.remove("open");
 
-  mt.classList.remove("menu-open");
+  menuToggle.classList.remove("menu-open");
 
-  mt.setAttribute(
+  menuToggle.setAttribute(
     "aria-expanded",
     "false"
   );
 
-  mp.setAttribute(
+  menuPanel.setAttribute(
     "aria-hidden",
     "true"
   );
-
 }
 
 
-mt.addEventListener("click",()=>{
+menuToggle.addEventListener(
+  "click",
+  () => {
 
-  const open =
-    !mp.classList.contains("open");
+    const open =
+      !menuPanel.classList.contains("open");
 
-  mp.classList.toggle(
-    "open",
-    open
-  );
+    menuPanel.classList.toggle(
+      "open",
+      open
+    );
 
-  mt.classList.toggle(
-    "menu-open",
-    open
-  );
+    menuToggle.classList.toggle(
+      "menu-open",
+      open
+    );
 
-  mt.setAttribute(
-    "aria-expanded",
-    open
-  );
+    menuToggle.setAttribute(
+      "aria-expanded",
+      open
+    );
 
-  mp.setAttribute(
-    "aria-hidden",
-    !open
-  );
+    menuPanel.setAttribute(
+      "aria-hidden",
+      !open
+    );
 
-});
+  }
+);
 
 
 document
   .querySelectorAll(".menu-links a")
-  .forEach(a =>
-    a.addEventListener(
+  .forEach(
+    a => a.addEventListener(
       "click",
       closeMenu
     )
@@ -2129,226 +2298,59 @@ document
 
 
 /* =========================
-   CATEGORÍAS ACTIVAS
+   CATEGORIAS ACTIVAS
 ========================= */
 
-const sideLinks =
-  [...document.querySelectorAll(".side-link")];
+const sideLinks = [
+  ...document.querySelectorAll(".side-link")
+];
 
-const cats =
-  [...document.querySelectorAll(".portfolio-category")];
+const categories = [
+  ...document.querySelectorAll(".portfolio-category")
+];
 
 
 const observer =
   new IntersectionObserver(
-
     entries => {
 
-      entries.forEach(entry => {
+      entries.forEach(
+        entry => {
 
-        if(entry.isIntersecting){
+          if(entry.isIntersecting){
 
-          sideLinks.forEach(link => {
+            sideLinks.forEach(
+              link => {
 
-            link.classList.toggle(
-              "active",
-              link.dataset.section ===
-              entry.target.id
+                link.classList.toggle(
+                  "active",
+                  link.dataset.section ===
+                  entry.target.id
+                );
+
+              }
             );
 
-          });
+          }
 
         }
-
-      });
+      );
 
     },
-
     {
       rootMargin:"-20% 0px -60% 0px",
       threshold:0
     }
-
   );
 
 
-cats.forEach(category =>
-  observer.observe(category)
+categories.forEach(
+  category =>
+    observer.observe(category)
 );
 
 
-/* =========================
-   REELS OPTIMIZADOS
-========================= */
-
-/*
-   IMPORTANTE:
-
-   Los videos NO tienen src directamente.
-
-   Se utiliza data-src.
-
-   Esto evita que los 3 MP4 se descarguen
-   cuando el usuario abre la página.
-
-   Cada reel se carga solamente cuando está
-   cerca de aparecer en pantalla.
-*/
-
-const reelVideos =
-  [...document.querySelectorAll(".reel-video")];
-
-
-function loadReel(video){
-
-  if(
-    video.dataset.loaded === "1"
-  ){
-    return;
-  }
-
-  const src =
-    video.dataset.src;
-
-  if(!src){
-    return;
-  }
-
-  video.src = src;
-
-  video.dataset.loaded = "1";
-
-  video.load();
-
-}
-
-
-/* =========================
-   LAZY LOAD DE VIDEOS
-========================= */
-
-if(
-  "IntersectionObserver" in window
-){
-
-  const videoObserver =
-    new IntersectionObserver(
-
-      entries => {
-
-        entries.forEach(entry => {
-
-          if(
-            entry.isIntersecting
-          ){
-
-            loadReel(
-              entry.target
-            );
-
-            videoObserver.unobserve(
-              entry.target
-            );
-
-          }
-
-        });
-
-      },
-
-      {
-        rootMargin:"300px 0px",
-        threshold:0.01
-      }
-
-    );
-
-
-  reelVideos.forEach(video =>
-    videoObserver.observe(video)
-  );
-
-}
-else{
-
-  reelVideos.forEach(
-    loadReel
-  );
-
-}
-
-
-/* =========================
-   SOLO UN REEL A LA VEZ
-========================= */
-
-reelVideos.forEach(video => {
-
-  video.addEventListener(
-    "play",
-    () => {
-
-      reelVideos.forEach(other => {
-
-        if(
-          other !== video
-        ){
-
-          other.pause();
-
-        }
-
-      });
-
-    }
-  );
-
-});
-
-
-/* =========================
-   PAUSAR REEL AL SALIR
-========================= */
-
-if(
-  "IntersectionObserver" in window
-){
-
-  const playingObserver =
-    new IntersectionObserver(
-
-      entries => {
-
-        entries.forEach(entry => {
-
-          if(
-            !entry.isIntersecting &&
-            !entry.target.paused
-          ){
-
-            entry.target.pause();
-
-          }
-
-        });
-
-      },
-
-      {
-        threshold:0.15
-      }
-
-    );
-
-
-  reelVideos.forEach(video =>
-    playingObserver.observe(video)
-  );
-
-}
-
 </script>
-
 
 </body>
 </html>
