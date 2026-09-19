@@ -178,7 +178,7 @@ nav{
 .hamb:before,
 .hamb:after{
   content:"";
-  position:absolute;
+  position:absolute; 
   left:0;
   width:100%;
   height:1px;
@@ -1210,6 +1210,43 @@ footer{
 }
 
 
+
+/* ================================
+   YOUTUBE SHORTS / REELS
+================================ */
+.youtube-short-card{
+  min-width:0;
+}
+.youtube-short-preview{
+  position:relative;
+  display:block;
+  aspect-ratio:9/16;
+  overflow:hidden;
+  background:#050b18;
+}
+.youtube-short-preview img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s ease,filter .5s ease;
+}
+.youtube-short-card:hover .youtube-short-preview img{
+  transform:scale(1.035);
+  filter:brightness(.72);
+}
+.youtube-short-preview .youtube-play{
+  position:absolute;
+  left:50%;
+  top:50%;
+  z-index:2;
+  transform:translate(-50%,-50%);
+}
+.youtube-short-preview .youtube-badge{
+  left:12px;
+  top:12px;
+}
+
 /* ================================
    RESPONSIVE
 ================================ */
@@ -1388,20 +1425,6 @@ footer{
     grid-template-columns:1fr
   }
 
-  /*
-    En celular dejamos los videos con su
-    proporción real.
-  */
-
-  .reel-visual{
-    height:auto;
-    aspect-ratio:9/16
-  }
-
-  .reel-card:nth-child(2) .reel-visual,
-  .reel-card:nth-child(3) .reel-visual{
-    aspect-ratio:4/3
-  }
 
   .longform-head{
     display:block;
@@ -1785,25 +1808,12 @@ footer{
              REEL 1 — VIMEO
         ================================= -->
 
-        <article class="project reel-card">
-
-          <div class="visual reel-visual">
-
-            <div class="vimeo-wrapper vertical">
-
-              <iframe
-                src="https://player.vimeo.com/video/1227611264?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                title="Reel 1"
-              ></iframe>
-
-            </div>
-
-          </div>
-
+        <article class="project reel-card youtube-short-card">
+          <a class="youtube-short-preview" href="https://youtube.com/shorts/TGwi95F2m_k?feature=share" target="_blank" rel="noopener noreferrer" aria-label="Ver Reel 1 en YouTube Shorts">
+            <img src="https://i.ytimg.com/vi/TGwi95F2m_k/maxresdefault.jpg" alt="Vista previa del Reel 1" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/TGwi95F2m_k/hqdefault.jpg'">
+            <span class="youtube-play" aria-hidden="true">▶</span>
+            <span class="youtube-badge">YOUTUBE SHORTS</span>
+          </a>
         </article>
 
 
@@ -1812,25 +1822,12 @@ footer{
              REEL 2 — VIMEO
         ================================= -->
 
-        <article class="project reel-card">
-
-          <div class="visual reel-visual">
-
-            <div class="vimeo-wrapper landscape">
-
-              <iframe
-                src="https://player.vimeo.com/video/1227611527?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                title="Reel 2"
-              ></iframe>
-
-            </div>
-
-          </div>
-
+        <article class="project reel-card youtube-short-card">
+          <a class="youtube-short-preview" href="https://youtube.com/shorts/jFJAngFmKE0?feature=share" target="_blank" rel="noopener noreferrer" aria-label="Ver Reel 2 en YouTube Shorts">
+            <img src="https://i.ytimg.com/vi/jFJAngFmKE0/maxresdefault.jpg" alt="Vista previa del Reel 2" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/jFJAngFmKE0/hqdefault.jpg'">
+            <span class="youtube-play" aria-hidden="true">▶</span>
+            <span class="youtube-badge">YOUTUBE SHORTS</span>
+          </a>
         </article>
 
 
@@ -1839,25 +1836,12 @@ footer{
              REEL 3 — VIMEO
         ================================= -->
 
-        <article class="project reel-card">
-
-          <div class="visual reel-visual">
-
-            <div class="vimeo-wrapper landscape">
-
-              <iframe
-                src="https://player.vimeo.com/video/1227612222?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                title="Video 3"
-              ></iframe>
-
-            </div>
-
-          </div>
-
+        <article class="project reel-card youtube-short-card">
+          <a class="youtube-short-preview" href="https://youtube.com/shorts/7_R_lyT2-dQ?feature=share" target="_blank" rel="noopener noreferrer" aria-label="Ver Reel 3 en YouTube Shorts">
+            <img src="https://i.ytimg.com/vi/7_R_lyT2-dQ/maxresdefault.jpg" alt="Vista previa del Reel 3" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/7_R_lyT2-dQ/hqdefault.jpg'">
+            <span class="youtube-play" aria-hidden="true">▶</span>
+            <span class="youtube-badge">YOUTUBE SHORTS</span>
+          </a>
         </article>
 
 
